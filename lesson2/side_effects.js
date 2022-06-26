@@ -28,4 +28,31 @@ function getName() {
 }
 
 
-getName();
+let date = new Date(); //side effect: access the system clock
+let rand = Math.random(): //side effect: access the random number generator
+
+
+//Side Effects through Execeptions 
+function divideBy(numerator, denominator) {
+  if (denominator === 0) {
+    throw new Error("Divide by zero!"); //side effect: raises an exception that it doesn't catch & handle
+  }
+
+  return numerator / denominator;
+}
+
+
+
+
+//Practice Problems: 
+const bar = 42;
+let qux = [1, 2, 3];
+let baz = 3;
+
+function foo(arr) {
+  let value = arr.pop(); //side effect: mutate a non-local object (qux)
+  console.log(`popped ${value} from the array`); //side effect: logging to the console
+  return value + bar + baz;
+}
+
+foo(qux);

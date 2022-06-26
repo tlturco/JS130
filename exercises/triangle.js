@@ -61,3 +61,7 @@ module.exports = Triangle;
 // console.log(equilateral.kind());
 // console.log(isosceles.kind());
 // console.log(scalene.kind());
+
+
+
+//Exercise 2

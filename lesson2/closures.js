@@ -288,7 +288,10 @@ list(); //read book
 addBreak("Private/Closures: Example 3");
 // eslint-disable-next-line max-lines-per-function
 function makeList2() {
-  let items = [];
+  let items = []; //moving the items outside of the returned objects makes it only
+  //accessible from your interface (ie the methods that you provide)
+  //prevents other coders from mucking up your data
+  //super fun!
   return {
     add(todo) {
       items.push(todo);

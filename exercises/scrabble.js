@@ -31,7 +31,7 @@ class Scrabble {
   static score(word) {
     let result = 0;
     if (word) {
-      word = word.toLowerCase().trim();
+      word = word.toLowerCase().replace(/[^a-z]/g, '');
       for (let i = 0; i < word.length; i++) {
         result += Scrabble.LETTER_SCORES[word[i]];
       }
